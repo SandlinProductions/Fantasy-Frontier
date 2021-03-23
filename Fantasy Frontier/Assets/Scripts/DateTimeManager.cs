@@ -17,17 +17,17 @@ public class DateTimeManager : MonoBehaviour
     public int year;
     void Start()
     {
-        startHour = 6;
-        startDay = 15;
-        startMonth = 07;
-        startYear = 2017;
+        startHour = 11;
+        startDay = 27;
+        startMonth = 01;
+        startYear = 1001;
         year = startYear;
         month = startMonth;
         day = startDay;
         hour = startHour;
         year = startYear;
         timeMode = 1; //mode 2 and 3 for fast forwarding hours and days respectively
-        timeScale = 200.0f; //change time speed: 200 = one hour takes 18 seconds
+        timeScale = 60.0f; //change time speed: 60 = one hour takes 60 seconds
         am = true;
         noonAm = false; //true = noon is AM; option for 12 am/pm confusion
         calendarText = GameObject.Find("Calendar").GetComponent<TextMeshProUGUI>(); //create text box "Calendar" in Unity
@@ -140,99 +140,26 @@ public class DateTimeManager : MonoBehaviour
     {
         if (month == 1)
         {
-            monthName = "Jan";
+            monthName = "Spring";
         }
         if (month == 2)
         {
-            monthName = "Feb";
+            monthName = "Summer";
         }
         if (month == 3)
         {
-            monthName = "Mar";
-        }
-        if (month == 4)
-        {
-            monthName = "Apr";
-        }
-        if (month == 5)
-        {
-            monthName = "May";
-        }
-        if (month == 6)
-        {
-            monthName = "Jun";
-        }
-        if (month == 7)
-        {
-            monthName = "Jul";
-        }
-        if (month == 8)
-        {
-            monthName = "Aug";
-        }
-        if (month == 9)
-        {
-            monthName = "Sep";
-        }
-        if (month == 10)
-        {
-            monthName = "Oct";
-        }
-        if (month == 11)
-        {
-            monthName = "Nov";
-        }
-        if (month == 12)
-        {
-            monthName = "Dec";
+            monthName = "Autumn";
         }
         TextCallFunction();
     }
     //determining total days in a month and leap years
     void CalculateMonthLength()
     {
-        if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
+        if (day >= 28)
         {
-            if (day >= 32)
-            {
-                month++;
-                day = 1;
-                DetermineMonth();
-            }
-        }
-        if (month == 2)
-        {
-            if (day >= 29)
-            {
-                //leap year
-                if (year % 4 == 0 && year % 100 != 0)
-                {
-                    TextCallFunction();
-                    DetermineMonth();
-                    leapYear = true;
-                }
-                if (leapYear == false)
-                {
-                    month++;
-                    day = 1;
-                    DetermineMonth();
-                }
-                else if (day == 30)
-                {
-                    month++;
-                    day = 1;
-                    DetermineMonth();
-                }
-            }
-            if (month == 4 || month == 6 || month == 9 || month == 11)
-            {
-                if (day >= 31)
-                {
-                    month++;
-                    day = 1;
-                    DetermineMonth();
-                }
-            }
+           month++;
+           day = 1;
+           DetermineMonth();
         }
     }
 
