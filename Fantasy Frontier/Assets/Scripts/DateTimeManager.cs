@@ -17,8 +17,8 @@ public class DateTimeManager : MonoBehaviour
     public int year;
     void Start()
     {
-        startHour = 11;
-        startDay = 27;
+        startHour = 22;
+        startDay = 28;
         startMonth = 01;
         startYear = 1001;
         year = startYear;
@@ -155,7 +155,7 @@ public class DateTimeManager : MonoBehaviour
     //determining total days in a month and leap years
     void CalculateMonthLength()
     {
-        if (day >= 28)
+        if (day >= 29)
         {
            month++;
            day = 1;
@@ -177,26 +177,23 @@ public class DateTimeManager : MonoBehaviour
             }
             else if (minute >= 60)
             {
-                if (hour <= 12 && am == true)
+                if (hour <= 23)
                 {
                     hour++;
-                    if (hour >= 13)
-                    {
-                        am = false;
-                        hour = 1;
-                    }
-                }
-                else if (hour <= 12 && am == false)
-                {
-                    hour++;
-                    if (hour == 12)
+                    //if (hour >= 13)
+                    //{
+                    //    am = false;
+                    //    hour = 1;
+                    //}
+                    if (hour == 24)
                     {
                         day++;
+                        hour = 0;
                     }
-                    else if (hour >= 13)
+                    else if (hour > 23)
                     {
-                        hour = 1;
-                        am = true;
+                        hour = 0;
+                        //am = true;
                     }
                 }
                 minute = 0;
