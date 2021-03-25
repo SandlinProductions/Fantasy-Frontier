@@ -8,7 +8,7 @@ public class DateTimeManager : MonoBehaviour
 {
     public float timeScale;
     public int timeMode;
-    public int startHour, startDay, startMonth, startYear;
+    //public int startHour, startDay, startMonth, startYear;
     public string monthName;
     public bool am, noonAm, leapYear;
     //private Text calendarText;
@@ -17,19 +17,19 @@ public class DateTimeManager : MonoBehaviour
     public int year;
     void Start()
     {
-        startHour = 22;
-        startDay = 28;
-        startMonth = 01;
-        startYear = 1001;
-        year = startYear;
-        month = startMonth;
-        day = startDay;
-        hour = startHour;
-        year = startYear;
+        //startHour = 22;
+        //startDay = 28;
+        //startMonth = 01;
+        //startYear = 1001;
+        //year = startYear;
+        //month = startMonth;
+        //day = startDay;
+        //hour = startHour;
+        //year = startYear;
         timeMode = 1; //mode 2 and 3 for fast forwarding hours and days respectively
         timeScale = 60.0f; //change time speed: 60 = one hour takes 60 seconds
-        am = true;
-        noonAm = false; //true = noon is AM; option for 12 am/pm confusion
+        //am = true;
+        //noonAm = false; //true = noon is AM; option for 12 am/pm confusion
         calendarText = GameObject.Find("Calendar").GetComponent<TextMeshProUGUI>(); //create text box "Calendar" in Unity
         DetermineMonth();
     }
@@ -150,9 +150,13 @@ public class DateTimeManager : MonoBehaviour
         {
             monthName = "Autumn";
         }
+        if (month == 4)
+        {
+            monthName = "Winter";
+        }
         TextCallFunction();
     }
-    //determining total days in a month and leap years
+    //determining total days in a month
     void CalculateMonthLength()
     {
         if (day >= 29)
@@ -180,11 +184,6 @@ public class DateTimeManager : MonoBehaviour
                 if (hour <= 23)
                 {
                     hour++;
-                    //if (hour >= 13)
-                    //{
-                    //    am = false;
-                    //    hour = 1;
-                    //}
                     if (hour == 24)
                     {
                         day++;
@@ -193,7 +192,6 @@ public class DateTimeManager : MonoBehaviour
                     else if (hour > 23)
                     {
                         hour = 0;
-                        //am = true;
                     }
                 }
                 minute = 0;
@@ -203,7 +201,7 @@ public class DateTimeManager : MonoBehaviour
             {
                 CalculateMonthLength();
             }
-            else if (month >= 12)
+            else if (month >= 5)
             {
                 month = 1;
                 year++;
@@ -251,7 +249,7 @@ public class DateTimeManager : MonoBehaviour
             {
                 CalculateMonthLength();
             }
-            else if (month >= 12)
+            else if (month >= 5)
             {
                 month = 1;
                 year++;
@@ -273,7 +271,7 @@ public class DateTimeManager : MonoBehaviour
                 CalculateMonthLength();
                 DetermineMonth();
             }
-            else if (month >= 12)
+            else if (month >= 5)
             {
                 month = 1;
                 year++;
