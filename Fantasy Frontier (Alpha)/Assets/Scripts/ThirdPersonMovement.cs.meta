@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: f9d3dc90fa1c64e50b358fd60d2d0412
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - movementControl: {fileID: -461662095737419560, guid: ce160fab8df9e4d0fbb78dbad7bea3af, type: 3}
+  - jumpControl: {fileID: -3801880949357538736, guid: ce160fab8df9e4d0fbb78dbad7bea3af, type: 3}
+  - controller: {instanceID: 0}
+  - animator: {instanceID: 0}
+  - cam: {instanceID: 0}
+  - groundCheck: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

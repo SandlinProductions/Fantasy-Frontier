@@ -1,0 +1,33 @@
+{
+    "name": "Lookcontrols",
+    "maps": [
+        {
+            "name": "Vertical",
+            "id": "916fe577-7262-4201-a2d8-5c784b22cd92",
+            "actions": [
+                {
+                    "name": "CameraLook",
+                    "type": "PassThrough",
+                    "id": "472fa93e-47b9-4e7e-bead-df276a3379da",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b6973df7-d60c-44c6-8d7d-20f973193406",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraLook",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

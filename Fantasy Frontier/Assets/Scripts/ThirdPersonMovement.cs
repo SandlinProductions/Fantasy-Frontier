@@ -1,33 +1,49 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ThirdPersonMovement : MonoBehaviour
 {
+    [SerializeField]
+    private InputActionReference movementControl;
+    [SerializeField]
+    private InputActionReference jumpControl;
+    //PlayerControls controls;
     public CharacterController controller;//reference to the CharacterController on our player
     public Animator animator;
     public Transform cam;//use main camera and not the Cinamachine camera
     public Transform groundCheck;//this is our groundcheck gameobject on the player
     public float speed = 6f;//speed of the Character
+    [SerializeField]
+    private float jumpHeight = 1.0f;
     public float gravity = -9.81f;//gravity that brings us back to the ground
     public float groundDistance = 0.4f;//this is the radius of the sphere we use to check
     public LayerMask groundMask;//what objects the groundcheck checks for
     public float turnSmoothTime = .1f;//how smooth the player turns
     float turnSmoothVelocity;//speed of turn
+    //Vector2 move;
     Vector3 velocity;//this is us falling
     bool isGrounded;//true grounded flase we are not grounded
     // Update is called once per frame
-    void Update()
+    private void Awake()
+    {
+        //controls = new PlayerControls();
+        //controls.Gameplay.Movement.performed += context => move = context.ReadValue<Vector2>();
+        //controls.Gameplay.Movement.canceled += context => move = Vector2.zero;
+    }
+
+    void FixedUpdate()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);//this creates a sphere on the groundcheck
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
-
-        float horizontal = Input.GetAxisRaw("Horizontal");//this moves the player side to side
-        float vertical = Input.GetAxisRaw("Vertical");//this moves the player forward and back
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;//normalized help it from not going fast when going diagonal
+        Vector2 movement = movementControl.action.ReadValue<Vector2>();
+        //float horizontal = Input.GetAxisRaw("Vertical");//this moves the player side to side
+        //float vertical = Input.GetAxisRaw("Vertical");//this moves the player forward and back
+        Vector3 direction = new Vector3(movement.x, 0f, movement.y).normalized;//normalized help it from not going fast when going diagonal
 
         if(direction.magnitude >= 0.1f) //this is where the magic happens with moving the player and making it so the player's forward is the way the camera is facing
         {
@@ -44,8 +60,17 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             animator.SetFloat("move", 0);
         }
+        // Changes the height position of the player..
+        if (jumpControl.action.triggered && isGrounded)
+        {
+            Jump();
+        }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+    private void Jump()
+    {
+        velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
     }
     private float SetCorrectAnimation()
     {
@@ -73,4 +98,18 @@ public class ThirdPersonMovement : MonoBehaviour
         }
         return currentAnimationSpeed;
     }
+
+    private void OnEnable()
+    {
+       // controls.Gameplay.Enable();
+        movementControl.action.Enable();
+        jumpControl.action.Enable();
+    }
+    private void OnDisable()
+    {
+        //controls.Gameplay.Disable();
+        movementControl.action.Disable();
+        jumpControl.action.Disable();
+    }
+
 }
