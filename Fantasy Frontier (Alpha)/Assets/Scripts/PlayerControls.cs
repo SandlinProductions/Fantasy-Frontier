@@ -58,7 +58,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d1cee291-62cb-40bf-875f-5e5d9bb95066"",
-                    ""path"": ""<Mouse>/delta"",
+                    ""path"": ""<Mouse>/scroll"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
