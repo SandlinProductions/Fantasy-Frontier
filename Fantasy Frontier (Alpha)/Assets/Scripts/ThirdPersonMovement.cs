@@ -9,6 +9,8 @@ public class ThirdPersonMovement : MonoBehaviour
     private InputActionReference movementControl;
     [SerializeField]
     private InputActionReference jumpControl;
+    [SerializeField]
+    private InputActionReference runControl;
     public CharacterController controller;//reference to the CharacterController on our player
     //public Animator animator;
     public Transform cam;//use main camera and not the Cinamachine camera
@@ -23,8 +25,17 @@ public class ThirdPersonMovement : MonoBehaviour
     float turnSmoothVelocity;//speed of turn
     Vector3 velocity;//this is us falling
     bool isGrounded;//true grounded flase we are not grounded
-    // Update is called once per frame
-    
+                    // Update is called once per frame
+
+    private void Update()
+    {
+        if (runControl.action.triggered)
+        {
+            Run();
+        }
+
+          
+    }
     void FixedUpdate()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);//this creates a sphere on the groundcheck
@@ -62,6 +73,12 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         velocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravity);
     }
+
+    private void Run()
+    {
+        Debug.Log("Runing?");
+        speed = 12;
+    }
     //private float SetCorrectAnimation()
     //{
     //    //float currentAnimationSpeed = animator.GetFloat("move");
@@ -93,11 +110,13 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         movementControl.action.Enable();
         jumpControl.action.Enable();
+        runControl.action.Enable();
     }
     private void OnDisable()
     {
         movementControl.action.Disable();
         jumpControl.action.Disable();
+        runControl.action.Disable();
     }
 
 }
