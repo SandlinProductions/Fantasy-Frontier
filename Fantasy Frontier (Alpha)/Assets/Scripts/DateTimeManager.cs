@@ -49,27 +49,27 @@ public class DateTimeManager : MonoBehaviour
                 {
                     if (minute <= 9)
                     {
-                        calendarText.text = monthName + " " + day + " " + year + " " + "0" + hour + ":0" + minute + " AM";
+                        calendarText.text = monthName + " " + day + " " + "0" + hour + ":0" + minute + " AM";
                     }
                     else
                     {
-                        calendarText.text = monthName + " " + day + " " + year + " " + "0" + hour + ":" + minute + " AM";
+                        calendarText.text = monthName + " " + day + "  " + "0" + hour + ":" + minute + " AM";
                     }
                 }
                 else if (minute <= 9)
                 {
-                    calendarText.text = monthName + " " + day + " " + year + " " + hour + ":0" + minute + " AM";
+                    calendarText.text = monthName + " " + day + "  " + hour + ":0" + minute + " AM";
                     if (noonAm == false && hour == 12)
                     {
-                        calendarText.text = monthName + " " + day + " " + year + " " + hour + ":0" + minute + " PM";
+                        calendarText.text = monthName + " " + day + "  " + hour + ":0" + minute + " PM";
                     }
                 }
                 else
                 {
-                    calendarText.text = monthName + " " + day + " " + year + " " + hour + ":" + minute + " AM";
+                    calendarText.text = monthName + " " + day + "  " + hour + ":" + minute + " AM";
                     if (noonAm == false && hour == 12)
                     {
-                        calendarText.text = monthName + " " + day + " " + year + " " + hour + ":" + minute + " PM";
+                        calendarText.text = monthName + " " + day + "  " + hour + ":" + minute + " PM";
                     }
                 }
             }
@@ -79,29 +79,29 @@ public class DateTimeManager : MonoBehaviour
                 {
                     if (minute <= 9)
                     {
-                        calendarText.text = monthName + " " + day + " " + year + " " + "0" + hour + ":0" + minute + " PM";
+                        calendarText.text = monthName + " " + day + "  " + "0" + hour + ":0" + minute + " PM";
                     }
                     else
                     {
-                        calendarText.text = monthName + " " + day + " " + year + " " + "0" + hour + ":" + minute + " PM";
+                        calendarText.text = monthName + " " + day + "  " + "0" + hour + ":" + minute + " PM";
                     }
                 }
                 else
                 {
                     if (minute <= 9)
                     {
-                        calendarText.text = monthName + " " + day + " " + year + " " + hour + ":0" + minute + " PM";
+                        calendarText.text = monthName + " " + day + "  " + hour + ":0" + minute + " PM";
                         if (noonAm == false && hour == 12)
                         {
-                            calendarText.text = monthName + " " + day + " " + year + " " + hour + ":0" + minute + " AM";
+                            calendarText.text = monthName + " " + day + "  " + hour + ":0" + minute + " AM";
                         }
                     }
                     else
                     {
-                        calendarText.text = monthName + " " + day + " " + year + " " + hour + ":" + minute + " PM";
+                        calendarText.text = monthName + " " + day + "  " + hour + ":" + minute + " PM";
                         if (noonAm == false && hour == 12)
                         {
-                            calendarText.text = monthName + " " + day + " " + year + " " + hour + ":" + minute + " AM";
+                            calendarText.text = monthName + " " + day + "  " + hour + ":" + minute + " AM";
                         }
                     }
                 }
