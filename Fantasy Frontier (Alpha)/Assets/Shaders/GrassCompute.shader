@@ -15,6 +15,7 @@ Shader "Grass/GrassCompute"
     Properties
     {
         _TopColor("Top color", Color) = (0, 1, 0, 1) // Color of the highest layer
+
         _BaseColor("Base color", Color) = (1, 1, 0, 1) // Color of the lowest layer
         _AmbientStrength("Ambient Strength", Range(0, 1)) = 0.5
     }
@@ -24,6 +25,7 @@ Shader "Grass/GrassCompute"
         Tags { "RenderType" = "Opaque" "RenderPipeline" = "UniversalPipeline" "IgnoreProjector" = "True" }
 
         // Forward Lit Pass
+
         Pass
         {
             Name "ForwardLit"
@@ -49,7 +51,7 @@ Shader "Grass/GrassCompute"
             #pragma fragment frag
 
             // Include vertex and fragment functions
-            #include "GrassCompute.hlsl"
+            #include "GrassCompute1.hlsl"
 
             ENDHLSL
         }
@@ -66,6 +68,7 @@ Shader "Grass/GrassCompute"
             
             HLSLPROGRAM
             // Signal this shader requires geometry function support
+
             #pragma prefer_hlslcc gles
             #pragma exclude_renderers d3d11_9x
             #pragma target 5.0
@@ -78,6 +81,7 @@ Shader "Grass/GrassCompute"
             #pragma fragment frag
 
             // A custom keyword to modify logic during the shadow caster pass
+
             #define SHADERPASS_SHADOWCASTER
 
             #pragma shader_feature_local _ DISTANCE_DETAIL

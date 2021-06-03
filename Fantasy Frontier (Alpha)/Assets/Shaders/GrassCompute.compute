@@ -31,6 +31,7 @@
 // ...
 
 // Define some constants
+
 #define PI          3.14159265358979323846
 #define TWO_PI      6.28318530717958647693
 
@@ -40,6 +41,7 @@ struct SourceVertex
     float3 positionOS; // position in object space
     float3 normalOS;
     float2 uv;  // contains widthMultiplier, heightMultiplier
+
     float3 color;
 };
 
@@ -53,7 +55,7 @@ struct DrawVertex
     float2 uv;
     float3 diffuseColor;
     // shadows variable is no needed (same as positionWS) 
-    // float fogFactor;
+    //float fogFactor;
 };
 
 // A triangle on the generated mesh
@@ -76,6 +78,7 @@ struct IndirectArgs
 };
 
 // The kernel will count the number of vertices, so this must be RW enabled
+
 RWStructuredBuffer<IndirectArgs> _IndirectArgsBuffer;
 
 // These values are bounded by limits in C# scripts,
@@ -165,6 +168,7 @@ DrawVertex GrassVertex(float3 positionOS, float width, float height,
     output.uv = uv;
     output.diffuseColor = color;
     // shadows is exactly as positionWS (no need to create a new variable)
+
     return output;
 }
 
@@ -190,6 +194,7 @@ void Main(uint3 id : SV_DispatchThreadID)
     float3 worldPos = mul(_LocalToWorld, float4(sv.positionOS, 1)).xyz;
 
     // Camera Distance for culling
+
     float distanceFromCamera = distance(worldPos, _CameraPositionWS);
     float distanceFade = 1 - saturate((distanceFromCamera - _MinFadeDist) / (_MaxFadeDist - _MinFadeDist));  // my version
     // float distanceFade = 1 - saturate((distanceFromCamera - _MinFadeDist) / _MaxFadeDist);  // original
@@ -209,21 +214,25 @@ void Main(uint3 id : SV_DispatchThreadID)
     float3 dis = distance(_PositionMoving, worldPos);
     float3 radius = 1 - saturate(dis / _InteractorRadius);
     // in world radius based on objects interaction radius
+
     float3 sphereDisp = worldPos - _PositionMoving; // position comparison
     sphereDisp *= radius; // position multiplied by radius for falloff
     // increase strength
     sphereDisp = clamp(sphereDisp.xyz * _InteractorStrength, -0.8, 0.8);
 
     // Set vertex color
+
     float3 color = sv.color;
   
     // Set grass height
     _GrassWidth *= sv.uv.x;  // UV.x == width multiplier (set in GeometryGrassPainter.cs)
+
     _GrassHeight *= sv.uv.y;  // UV.y == height multiplier (set in GeometryGrassPainter.cs)
     _GrassHeight *= clamp(rand(sv.positionOS.xyz), 1 - _GrassRandomHeight,
                           1 + _GrassRandomHeight);
 
     // Blades & Segments
+
     int numBladesPerVertex = min(GRASS_BLADES, max(1, _MaxBladesPerVertex));
     int numSegmentsPerBlade = min(GRASS_SEGMENTS, max(1, _MaxSegmentsPerBlade));
     int numTrianglesPerBlade = (numSegmentsPerBlade - 1) * 2 + 1;
@@ -233,6 +242,7 @@ void Main(uint3 id : SV_DispatchThreadID)
     for (int j = 0; j < numBladesPerVertex * distanceFade; ++j)
     {
         // set rotation and radius of the blades
+
         float3x3 facingRotationMatrix = AngleAxis3x3(
                 rand(sv.positionOS.xyz) * TWO_PI + j, float3(0, 1, -0.1));
         float3x3 transformationMatrix = facingRotationMatrix;
@@ -252,6 +262,7 @@ void Main(uint3 id : SV_DispatchThreadID)
             float segmentForward = pow(abs(t), _BladeCurve) * forward;
 
             // Add below the line declaring float segmentWidth
+
             float3x3 transformMatrix = (i == 0)
                     ? facingRotationMatrix
                     : transformationMatrix;
@@ -277,6 +288,7 @@ void Main(uint3 id : SV_DispatchThreadID)
         }
 
         // Append Top Vertex
+
         float3 topPosOS = v0 + float3(sphereDisp.x * 1.5, sphereDisp.y, sphereDisp.z * 1.5) + wind1;
         drawVertices[numSegmentsPerBlade * 2] = GrassVertex(topPosOS, 0, _GrassHeight, offset, forward,
                                                             float2(0.5, 1), transformationMatrix, color);

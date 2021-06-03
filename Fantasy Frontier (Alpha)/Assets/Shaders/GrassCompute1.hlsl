@@ -31,6 +31,7 @@ struct DrawVertex
 };
 
 // A triangle on the generated mesh
+
 struct DrawTriangle
 {
     float3 normalOS;
@@ -47,6 +48,7 @@ struct v2f
     float2 uv : TEXCOORD0;          // The height of this vertex on the grass blade
 
     float3 positionWS : TEXCOORD1; // Position in world space
+
     float3 normalWS : TEXCOORD2;   // Normal vector in world space
 
     float3 diffuseColor : COLOR;
@@ -69,6 +71,7 @@ float _FogEndDistance;
 v2f vert(uint vertexID : SV_VertexID)
 {
     // Initialize the output struct
+
     v2f output = (v2f)0;
 
     // Get the vertex from the buffer
@@ -140,6 +143,7 @@ half4 frag(v2f input) : SV_Target
     final.rgb = MixFog(final.rgb, 1 - saturate(fogFactor));
 
     // Add in ambient color
+
     final += UNITY_LIGHTMODEL_AMBIENT * _AmbientStrength;
     // final += half3(unity_SHAr.w, unity_SHAg.w, unity_SHAb.w) * _AmbientStrength;  // light color ambient
     // final += unity_AmbientSky * _AmbientStrength;  // skybox ambient
