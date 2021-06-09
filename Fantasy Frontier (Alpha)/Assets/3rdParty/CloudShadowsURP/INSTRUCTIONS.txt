@@ -1,0 +1,51 @@
+Cloud Shadows URP Lit Shader
+----------------------------
+
+This shader is based on the template created by Felipe Lira:
+	https://gist.github.com/phi-lira/225cd7c5e8545be602dca4eb5ed111ba
+
+How to install URP in your project:
+	https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@7.1/manual/InstallingAndConfiguringURP.html
+
+Watch this video of Unity's URP Sample Project with the materials replaced with this shader:
+	https://www.youtube.com/watch?v=AI-jZtT-uLc
+
+Tested in Unity 2019.
+
+
+ABOUT:
+------
+The original asset was built for the Standard render pipeline and used the Projector 
+component/shader, but that component is now obsolete in Unity. The benefit of the projector 
+was that it easily projected over most things. Unfortunately this version doesn't have that 
+ability, but might be a useful alternative, specifically for the Universal render pipeline. 
+
+
+HOW IT WORKS:
+-------------
+Import the Package file into your Unity project, or copy the files into your Assets folder. 
+Open the DEMO SCENE included to see how it works.
+
+Make sure the "SetShaderGlobalVars.cs" script is attached to an active object in your scene, 
+and edit its properties before playing the scene. The script is used to set global shader variables 
+so the affect will be applied to all materials/objects that use the shader. 
+
+When selecting the shader for a material, it can be found under: 
+	Universal Render Pipeline > Custom > Lit Cloud Shadows
+
+Simply said, the effect works by scrolling a texture over the object the material is attached to. 
+It also uses a noise texture for displacement and mixes it with the final color using the alpha value. 
+Adjust cloud shadow properties in the "SetShaderGlobalVars.cs" script, not the material.
+
+
+LIMITATIONS:
+------------
+This asset may not be useful in combination with other shaders, like Terrain, Foliage, Water, etc. 
+You might be able to edit those shaders yourself using similar methods used in this shader.
+The cloud shadows effect has no affect on actual shadows. 
+The effect looks stretched at steep angles or on vertical meshes. 
+Those features are beyond my knowledge or I didn't include them because it would complicate the shader. 
+
+LICENSE:
+--------
+Free to use, modify, and distribute. Use at your own risk.
