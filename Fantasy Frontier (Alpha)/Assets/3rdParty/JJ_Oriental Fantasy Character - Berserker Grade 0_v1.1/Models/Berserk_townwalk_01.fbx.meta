@@ -1,0 +1,890 @@
+fileFormatVersion: 2
+guid: 1b5284cc553eff843a7a90f6dfc018ab
+ModelImporter:
+  serializedVersion: 21100
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Back_Skirt_01
+  - first:
+      1: 100002
+    second: Back_Skirt_02
+  - first:
+      1: 100004
+    second: Back_Skirt_03
+  - first:
+      1: 100006
+    second: Back_Skirt_04
+  - first:
+      1: 100008
+    second: Back_Skirt_05
+  - first:
+      1: 100010
+    second: Back_Skirt_06
+  - first:
+      1: 100012
+    second: Back_Skirt_Root
+  - first:
+      1: 100014
+    second: BackLeft_Skirt_01
+  - first:
+      1: 100016
+    second: BackLeft_Skirt_02
+  - first:
+      1: 100018
+    second: BackLeft_Skirt_03
+  - first:
+      1: 100020
+    second: BackLeft_Skirt_04
+  - first:
+      1: 100022
+    second: BackLeft_Skirt_05
+  - first:
+      1: 100024
+    second: BackLeft_Skirt_Root
+  - first:
+      1: 100026
+    second: BackRight_Skirt_01
+  - first:
+      1: 100028
+    second: BackRight_Skirt_02
+  - first:
+      1: 100030
+    second: BackRight_Skirt_03
+  - first:
+      1: 100032
+    second: BackRight_Skirt_04
+  - first:
+      1: 100034
+    second: BackRight_Skirt_05
+  - first:
+      1: 100036
+    second: BackRight_Skirt_Root
+  - first:
+      1: 100038
+    second: //RootNode
+  - first:
+      1: 100040
+    second: Bip001
+  - first:
+      1: 100042
+    second: Bip001 Footsteps
+  - first:
+      1: 100044
+    second: Bip001 Head
+  - first:
+      1: 100046
+    second: Bip001 HeadNub
+  - first:
+      1: 100048
+    second: Bip001 L Calf
+  - first:
+      1: 100050
+    second: Bip001 L Clavicle
+  - first:
+      1: 100052
+    second: Bip001 L Finger0
+  - first:
+      1: 100054
+    second: Bip001 L Finger0Nub
+  - first:
+      1: 100056
+    second: Bip001 L Foot
+  - first:
+      1: 100058
+    second: Bip001 L Forearm
+  - first:
+      1: 100060
+    second: Bip001 L Hand
+  - first:
+      1: 100062
+    second: Bip001 L Thigh
+  - first:
+      1: 100064
+    second: Bip001 L Toe0
+  - first:
+      1: 100066
+    second: Bip001 L Toe0Nub
+  - first:
+      1: 100068
+    second: Bip001 L UpperArm
+  - first:
+      1: 100070
+    second: Bip001 Neck
+  - first:
+      1: 100072
+    second: Bip001 Pelvis
+  - first:
+      1: 100074
+    second: Bip001 Prop1
+  - first:
+      1: 100076
+    second: Bip001 Prop2
+  - first:
+      1: 100078
+    second: Bip001 R Calf
+  - first:
+      1: 100080
+    second: Bip001 R Clavicle
+  - first:
+      1: 100082
+    second: Bip001 R Finger0
+  - first:
+      1: 100084
+    second: Bip001 R Finger0Nub
+  - first:
+      1: 100086
+    second: Bip001 R Foot
+  - first:
+      1: 100088
+    second: Bip001 R Forearm
+  - first:
+      1: 100090
+    second: Bip001 R Hand
+  - first:
+      1: 100092
+    second: Bip001 R Thigh
+  - first:
+      1: 100094
+    second: Bip001 R Toe0
+  - first:
+      1: 100096
+    second: Bip001 R Toe0Nub
+  - first:
+      1: 100098
+    second: Bip001 R UpperArm
+  - first:
+      1: 100100
+    second: Bip001 Spine
+  - first:
+      1: 100102
+    second: Bip001 Spine1
+  - first:
+      1: 100104
+    second: Cape_01
+  - first:
+      1: 100106
+    second: Cape_02
+  - first:
+      1: 100108
+    second: Cape_03
+  - first:
+      1: 100110
+    second: Cape_04
+  - first:
+      1: 100112
+    second: Cape_05
+  - first:
+      1: 100114
+    second: Cape_06
+  - first:
+      1: 100116
+    second: Cape_07
+  - first:
+      1: 100118
+    second: Cape_08
+  - first:
+      1: 100120
+    second: Cape_Root
+  - first:
+      1: 100122
+    second: ch_swordman_arm_01
+  - first:
+      1: 100124
+    second: ch_swordman_head_01
+  - first:
+      1: 100126
+    second: ch_swordman_leg_01
+  - first:
+      1: 100128
+    second: ch_swordman_lower_01
+  - first:
+      1: 100130
+    second: ch_swordman_shoulder_01
+  - first:
+      1: 100132
+    second: ch_swordman_upper_01
+  - first:
+      1: 100134
+    second: ch_swordman_weapon_01
+  - first:
+      1: 100136
+    second: Front_Skirt_01
+  - first:
+      1: 100138
+    second: Front_Skirt_02
+  - first:
+      1: 100140
+    second: Front_Skirt_03
+  - first:
+      1: 100142
+    second: Front_Skirt_04
+  - first:
+      1: 100144
+    second: Front_Skirt_05
+  - first:
+      1: 100146
+    second: Front_Skirt_06
+  - first:
+      1: 100148
+    second: Front_Skirt_Root
+  - first:
+      1: 100150
+    second: FrontLeft_Skirt_01
+  - first:
+      1: 100152
+    second: FrontLeft_Skirt_02
+  - first:
+      1: 100154
+    second: FrontLeft_Skirt_03
+  - first:
+      1: 100156
+    second: FrontLeft_Skirt_04
+  - first:
+      1: 100158
+    second: FrontLeft_Skirt_05
+  - first:
+      1: 100160
+    second: FrontLeft_Skirt_Root
+  - first:
+      1: 100162
+    second: FrontRight_Skirt_01
+  - first:
+      1: 100164
+    second: FrontRight_Skirt_02
+  - first:
+      1: 100166
+    second: FrontRight_Skirt_03
+  - first:
+      1: 100168
+    second: FrontRight_Skirt_04
+  - first:
+      1: 100170
+    second: FrontRight_Skirt_05
+  - first:
+      1: 100172
+    second: FrontRight_Skirt_Root
+  - first:
+      1: 100174
+    second: fx_bottom
+  - first:
+      1: 100176
+    second: fx_center
+  - first:
+      1: 100178
+    second: fx_top
+  - first:
+      1: 100180
+    second: fx_weapon_l
+  - first:
+      1: 100182
+    second: fx_weapon_r
+  - first:
+      1: 100184
+    second: Left_Shoulder
+  - first:
+      1: 100186
+    second: lefthandweapon
+  - first:
+      1: 100188
+    second: leftshoulder
+  - first:
+      1: 100190
+    second: movement
+  - first:
+      1: 100192
+    second: Object001
+  - first:
+      1: 100194
+    second: Right_Shoulder
+  - first:
+      1: 100196
+    second: righthandweapon
+  - first:
+      1: 100198
+    second: rightshoulder
+  - first:
+      1: 100200
+    second: UP_Hair_01
+  - first:
+      1: 100202
+    second: UP_Hair_02
+  - first:
+      1: 100204
+    second: UP_Hair_03
+  - first:
+      1: 100206
+    second: UP_Hair_04
+  - first:
+      1: 100208
+    second: UP_Hair_05
+  - first:
+      1: 100210
+    second: UP_Hair_06
+  - first:
+      1: 100212
+    second: UP_Hair_07
+  - first:
+      1: 100214
+    second: UP_Hair_08
+  - first:
+      1: 100216
+    second: UP_Hair_09
+  - first:
+      1: 100218
+    second: UP_Hair_Root
+  - first:
+      1: 100220
+    second: weapon_l
+  - first:
+      1: 100222
+    second: weapon_r
+  - first:
+      4: 400000
+    second: Back_Skirt_01
+  - first:
+      4: 400002
+    second: Back_Skirt_02
+  - first:
+      4: 400004
+    second: Back_Skirt_03
+  - first:
+      4: 400006
+    second: Back_Skirt_04
+  - first:
+      4: 400008
+    second: Back_Skirt_05
+  - first:
+      4: 400010
+    second: Back_Skirt_06
+  - first:
+      4: 400012
+    second: Back_Skirt_Root
+  - first:
+      4: 400014
+    second: BackLeft_Skirt_01
+  - first:
+      4: 400016
+    second: BackLeft_Skirt_02
+  - first:
+      4: 400018
+    second: BackLeft_Skirt_03
+  - first:
+      4: 400020
+    second: BackLeft_Skirt_04
+  - first:
+      4: 400022
+    second: BackLeft_Skirt_05
+  - first:
+      4: 400024
+    second: BackLeft_Skirt_Root
+  - first:
+      4: 400026
+    second: BackRight_Skirt_01
+  - first:
+      4: 400028
+    second: BackRight_Skirt_02
+  - first:
+      4: 400030
+    second: BackRight_Skirt_03
+  - first:
+      4: 400032
+    second: BackRight_Skirt_04
+  - first:
+      4: 400034
+    second: BackRight_Skirt_05
+  - first:
+      4: 400036
+    second: BackRight_Skirt_Root
+  - first:
+      4: 400038
+    second: //RootNode
+  - first:
+      4: 400040
+    second: Bip001
+  - first:
+      4: 400042
+    second: Bip001 Footsteps
+  - first:
+      4: 400044
+    second: Bip001 Head
+  - first:
+      4: 400046
+    second: Bip001 HeadNub
+  - first:
+      4: 400048
+    second: Bip001 L Calf
+  - first:
+      4: 400050
+    second: Bip001 L Clavicle
+  - first:
+      4: 400052
+    second: Bip001 L Finger0
+  - first:
+      4: 400054
+    second: Bip001 L Finger0Nub
+  - first:
+      4: 400056
+    second: Bip001 L Foot
+  - first:
+      4: 400058
+    second: Bip001 L Forearm
+  - first:
+      4: 400060
+    second: Bip001 L Hand
+  - first:
+      4: 400062
+    second: Bip001 L Thigh
+  - first:
+      4: 400064
+    second: Bip001 L Toe0
+  - first:
+      4: 400066
+    second: Bip001 L Toe0Nub
+  - first:
+      4: 400068
+    second: Bip001 L UpperArm
+  - first:
+      4: 400070
+    second: Bip001 Neck
+  - first:
+      4: 400072
+    second: Bip001 Pelvis
+  - first:
+      4: 400074
+    second: Bip001 Prop1
+  - first:
+      4: 400076
+    second: Bip001 Prop2
+  - first:
+      4: 400078
+    second: Bip001 R Calf
+  - first:
+      4: 400080
+    second: Bip001 R Clavicle
+  - first:
+      4: 400082
+    second: Bip001 R Finger0
+  - first:
+      4: 400084
+    second: Bip001 R Finger0Nub
+  - first:
+      4: 400086
+    second: Bip001 R Foot
+  - first:
+      4: 400088
+    second: Bip001 R Forearm
+  - first:
+      4: 400090
+    second: Bip001 R Hand
+  - first:
+      4: 400092
+    second: Bip001 R Thigh
+  - first:
+      4: 400094
+    second: Bip001 R Toe0
+  - first:
+      4: 400096
+    second: Bip001 R Toe0Nub
+  - first:
+      4: 400098
+    second: Bip001 R UpperArm
+  - first:
+      4: 400100
+    second: Bip001 Spine
+  - first:
+      4: 400102
+    second: Bip001 Spine1
+  - first:
+      4: 400104
+    second: Cape_01
+  - first:
+      4: 400106
+    second: Cape_02
+  - first:
+      4: 400108
+    second: Cape_03
+  - first:
+      4: 400110
+    second: Cape_04
+  - first:
+      4: 400112
+    second: Cape_05
+  - first:
+      4: 400114
+    second: Cape_06
+  - first:
+      4: 400116
+    second: Cape_07
+  - first:
+      4: 400118
+    second: Cape_08
+  - first:
+      4: 400120
+    second: Cape_Root
+  - first:
+      4: 400122
+    second: ch_swordman_arm_01
+  - first:
+      4: 400124
+    second: ch_swordman_head_01
+  - first:
+      4: 400126
+    second: ch_swordman_leg_01
+  - first:
+      4: 400128
+    second: ch_swordman_lower_01
+  - first:
+      4: 400130
+    second: ch_swordman_shoulder_01
+  - first:
+      4: 400132
+    second: ch_swordman_upper_01
+  - first:
+      4: 400134
+    second: ch_swordman_weapon_01
+  - first:
+      4: 400136
+    second: Front_Skirt_01
+  - first:
+      4: 400138
+    second: Front_Skirt_02
+  - first:
+      4: 400140
+    second: Front_Skirt_03
+  - first:
+      4: 400142
+    second: Front_Skirt_04
+  - first:
+      4: 400144
+    second: Front_Skirt_05
+  - first:
+      4: 400146
+    second: Front_Skirt_06
+  - first:
+      4: 400148
+    second: Front_Skirt_Root
+  - first:
+      4: 400150
+    second: FrontLeft_Skirt_01
+  - first:
+      4: 400152
+    second: FrontLeft_Skirt_02
+  - first:
+      4: 400154
+    second: FrontLeft_Skirt_03
+  - first:
+      4: 400156
+    second: FrontLeft_Skirt_04
+  - first:
+      4: 400158
+    second: FrontLeft_Skirt_05
+  - first:
+      4: 400160
+    second: FrontLeft_Skirt_Root
+  - first:
+      4: 400162
+    second: FrontRight_Skirt_01
+  - first:
+      4: 400164
+    second: FrontRight_Skirt_02
+  - first:
+      4: 400166
+    second: FrontRight_Skirt_03
+  - first:
+      4: 400168
+    second: FrontRight_Skirt_04
+  - first:
+      4: 400170
+    second: FrontRight_Skirt_05
+  - first:
+      4: 400172
+    second: FrontRight_Skirt_Root
+  - first:
+      4: 400174
+    second: fx_bottom
+  - first:
+      4: 400176
+    second: fx_center
+  - first:
+      4: 400178
+    second: fx_top
+  - first:
+      4: 400180
+    second: fx_weapon_l
+  - first:
+      4: 400182
+    second: fx_weapon_r
+  - first:
+      4: 400184
+    second: Left_Shoulder
+  - first:
+      4: 400186
+    second: lefthandweapon
+  - first:
+      4: 400188
+    second: leftshoulder
+  - first:
+      4: 400190
+    second: movement
+  - first:
+      4: 400192
+    second: Object001
+  - first:
+      4: 400194
+    second: Right_Shoulder
+  - first:
+      4: 400196
+    second: righthandweapon
+  - first:
+      4: 400198
+    second: rightshoulder
+  - first:
+      4: 400200
+    second: UP_Hair_01
+  - first:
+      4: 400202
+    second: UP_Hair_02
+  - first:
+      4: 400204
+    second: UP_Hair_03
+  - first:
+      4: 400206
+    second: UP_Hair_04
+  - first:
+      4: 400208
+    second: UP_Hair_05
+  - first:
+      4: 400210
+    second: UP_Hair_06
+  - first:
+      4: 400212
+    second: UP_Hair_07
+  - first:
+      4: 400214
+    second: UP_Hair_08
+  - first:
+      4: 400216
+    second: UP_Hair_09
+  - first:
+      4: 400218
+    second: UP_Hair_Root
+  - first:
+      4: 400220
+    second: weapon_l
+  - first:
+      4: 400222
+    second: weapon_r
+  - first:
+      21: 2100000
+    second: Material #8827087
+  - first:
+      21: 2100002
+    second: Material #8827088
+  - first:
+      21: 2100004
+    second: Material #8827084
+  - first:
+      21: 2100006
+    second: Material #8827091
+  - first:
+      21: 2100008
+    second: Material #8827086
+  - first:
+      21: 2100010
+    second: Material #8827093
+  - first:
+      21: 2100012
+    second: Material #8827089
+  - first:
+      21: 2100014
+    second: Material #8827092
+  - first:
+      23: 2300000
+    second: ch_swordman_shoulder_01
+  - first:
+      23: 2300002
+    second: ch_swordman_weapon_01
+  - first:
+      23: 2300004
+    second: Object001
+  - first:
+      33: 3300000
+    second: ch_swordman_shoulder_01
+  - first:
+      33: 3300002
+    second: ch_swordman_weapon_01
+  - first:
+      33: 3300004
+    second: Object001
+  - first:
+      43: 4300000
+    second: Object001
+  - first:
+      43: 4300002
+    second: ch_swordman_shoulder_01
+  - first:
+      43: 4300004
+    second: ch_swordman_weapon_01
+  - first:
+      43: 4300006
+    second: ch_swordman_leg_01
+  - first:
+      43: 4300008
+    second: ch_swordman_upper_01
+  - first:
+      43: 4300010
+    second: ch_swordman_arm_01
+  - first:
+      43: 4300012
+    second: ch_swordman_lower_01
+  - first:
+      43: 4300014
+    second: ch_swordman_head_01
+  - first:
+      74: 7400000
+    second: Berserk_townwalk_01
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: ch_swordman_arm_01
+  - first:
+      137: 13700002
+    second: ch_swordman_head_01
+  - first:
+      137: 13700004
+    second: ch_swordman_leg_01
+  - first:
+      137: 13700006
+    second: ch_swordman_lower_01
+  - first:
+      137: 13700008
+    second: ch_swordman_upper_01
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Berserk_townwalk_01
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

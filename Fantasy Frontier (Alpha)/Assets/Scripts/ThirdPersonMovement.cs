@@ -12,7 +12,7 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField]
     private InputActionReference runControl;
     public CharacterController controller;//reference to the CharacterController on our player
-    //public Animator animator;
+    public Animator animator;
     public Transform cam;//use main camera and not the Cinamachine camera
     public Transform groundCheck;//this is our groundcheck gameobject on the player
     public float speed = 6f;//speed of the Character
@@ -54,13 +54,13 @@ public class ThirdPersonMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;//this makes it so we move forward in the direction of the camera
             controller.Move(moveDir.normalized * speed * Time.deltaTime);//this is what actully moves our player (i think)
-           // var animationSpeedMultiplier = SetCorrectAnimation();
-            //velocity *= animationSpeedMultiplier;
+            var animationSpeedMultiplier = SetCorrectAnimation();
+            velocity *= animationSpeedMultiplier;
         }
-        //else
-        //{
-        //    animator.SetFloat("move", 0);
-        //}
+        else
+        {
+            animator.SetFloat("move", 0);
+        }
         // Changes the height position of the player..
         if (jumpControl.action.triggered && isGrounded)
         {
@@ -79,32 +79,32 @@ public class ThirdPersonMovement : MonoBehaviour
         Debug.Log("Runing?");
         speed = 12;
     }
-    //private float SetCorrectAnimation()
-    //{
-    //    //float currentAnimationSpeed = animator.GetFloat("move");
-    //    if (turnSmoothVelocity > 10 || turnSmoothVelocity < -10)
-    //    {
-    //        if (currentAnimationSpeed < 0.2f)
-    //        {
-    //            currentAnimationSpeed += Time.deltaTime * 2;
-    //            currentAnimationSpeed = Mathf.Clamp(currentAnimationSpeed, 0, .2f);
-    //        }
-    //        animator.SetFloat("move", currentAnimationSpeed);
-    //    }
-    //    else
-    //    {
-    //        if (currentAnimationSpeed < 1)
-    //        {
-    //            currentAnimationSpeed += Time.deltaTime * 2;
-    //        }
-    //        else
-    //        {
-    //            currentAnimationSpeed = 1;
-    //        }
-    //        animator.SetFloat("move", currentAnimationSpeed);
-    //    }
-    //    return currentAnimationSpeed;
-    //}
+    private float SetCorrectAnimation()
+    {
+        float currentAnimationSpeed = animator.GetFloat("move");
+        if (turnSmoothVelocity > 10 || turnSmoothVelocity < -10)
+        {
+            if (currentAnimationSpeed < 0.2f)
+            {
+                currentAnimationSpeed += Time.deltaTime * 2;
+                currentAnimationSpeed = Mathf.Clamp(currentAnimationSpeed, 0, .2f);
+            }
+            animator.SetFloat("move", currentAnimationSpeed);
+        }
+        else
+        {
+            if (currentAnimationSpeed < 1)
+            {
+                currentAnimationSpeed += Time.deltaTime * 2;
+            }
+            else
+        {
+            currentAnimationSpeed = 1;
+        }
+        animator.SetFloat("move", currentAnimationSpeed);
+    }
+        return currentAnimationSpeed;
+    }
 
     private void OnEnable()
     {

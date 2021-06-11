@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: ToonPlayerRender
-    Event: 1000
+    Event: 450
     filterSettings:
       RenderQueueType: 0
       LayerMask:
@@ -101,7 +101,7 @@ MonoBehaviour:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 239
+        m_Bits: 175
       PassNames: []
     overrideMaterial: {fileID: 2100000, guid: 4af334c547618bf49bd3d1f26373c3f6, type: 2}
     overrideMaterialPassIndex: 0
