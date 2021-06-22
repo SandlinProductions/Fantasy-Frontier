@@ -27,7 +27,7 @@ public class DateTimeManager : MonoBehaviour
         //hour = startHour;
         //year = startYear;
         timeMode = 1; //mode 2 and 3 for fast forwarding hours and days respectively
-        timeScale = 60.0f; //change time speed: 60 = one hour takes 60 seconds
+        //timeScale = 60.0f; //change time speed: 60 = one hour takes 60 seconds
         //am = true;
         //noonAm = false; //true = noon is AM; option for 12 am/pm confusion
         calendarText = GameObject.Find("Calendar").GetComponent<TextMeshProUGUI>(); //create text box "Calendar" in Unity
