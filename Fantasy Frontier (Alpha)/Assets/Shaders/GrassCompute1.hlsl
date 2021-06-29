@@ -1,5 +1,5 @@
 //
-// Created by @Forkercat on 03/04/2021.
+// Created by @Forkercat on 03/04/2021
 //
 // A URP grass shader using compute shader rather than geometry shader.
 // This file contains vertex and fragment functions. It also defines the

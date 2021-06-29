@@ -11,6 +11,7 @@
 //
 
 // Make sure this file is not included twice
+
 #ifndef GRASS_COMPUTE_INCLUDED
 #define GRASS_COMPUTE_INCLUDED
 
@@ -39,10 +40,10 @@ StructuredBuffer<DrawTriangle> _DrawTriangles;
 
 struct v2f
 {
-    float4 positionCS : SV_POSITION; // Position in clip space
+    float4 positionCS : SV_POSITION; // Position in clip space 
     float2 uv : TEXCOORD0;          // The height of this vertex on the grass blade
     float3 positionWS : TEXCOORD1; // Position in world space
-    float3 normalWS : TEXCOORD2;   // Normal vector in world space
+    float3 normalWS : TEXCOORD2;   // Normal vector in world space 
     float3 diffuseColor : COLOR;
 };
 
@@ -58,7 +59,7 @@ float _FogEndDistance;
 
 // Vertex function
 
-// -- retrieve data generated from compute shader
+// -- retrieve data generated from compute shader 
 v2f vert(uint vertexID : SV_VertexID)
 {
     // Initialize the output struct

@@ -38,7 +38,7 @@
 // This describes a vertex on the source mesh
 struct SourceVertex
 {
-    float3 positionOS; // position in object space
+    float3 positionOS; // position in object space 
     float3 normalOS;
     float2 uv;  // contains widthMultiplier, heightMultiplier
 
@@ -55,14 +55,14 @@ struct DrawVertex
     float2 uv;
     float3 diffuseColor;
     // shadows variable is no needed (same as positionWS) 
-    //float fogFactor;
+    //float fogFactor; 
 };
 
 // A triangle on the generated mesh
 struct DrawTriangle
 {
     float3 normalOS;
-    DrawVertex vertices[3]; // The three points on the triangle
+    DrawVertex vertices[3]; // The three points on the triangle 
 };
 
 // A buffer containing the generated mesh
@@ -89,7 +89,7 @@ RWStructuredBuffer<IndirectArgs> _IndirectArgsBuffer;
 
 // ----------------------------------------
 
-// Variables set by the renderer
+// Variables set by the rendere
 int _NumSourceVertices;
 
 // Local to world matrix
@@ -215,7 +215,7 @@ void Main(uint3 id : SV_DispatchThreadID)
     float3 radius = 1 - saturate(dis / _InteractorRadius);
     // in world radius based on objects interaction radius
 
-    float3 sphereDisp = worldPos - _PositionMoving; // position comparison
+    float3 sphereDisp = worldPos - _PositionMoving; // position comparison 
     sphereDisp *= radius; // position multiplied by radius for falloff
     // increase strength
     sphereDisp = clamp(sphereDisp.xyz * _InteractorStrength, -0.8, 0.8);

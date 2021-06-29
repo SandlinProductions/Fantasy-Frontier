@@ -21,7 +21,7 @@ Shader "Grass/GrassCompute"
     }
 
     SubShader {
-        // UniversalPipeline needed to have this render in URP
+        // UniversalPipeline needed to have this render in URP 
         Tags { "RenderType" = "Opaque" "RenderPipeline" = "UniversalPipeline" "IgnoreProjector" = "True" }
 
         // Forward Lit Pass
